@@ -11,3 +11,4 @@ datagroup: tablas_sap_default_datagroup {
 persist_with: tablas_sap_default_datagroup
 
 explore: sap_interfaz_recaudo {}
+explore: fact_matriculados {}
