@@ -10,7 +10,6 @@ datagroup: tablas_sap_default_datagroup {
 
 persist_with: tablas_sap_default_datagroup
 
-explore: sap_interfaz_recaudo {}
 explore: fact_matriculados {
   join: fact_facturacion {
     type: left_outer
@@ -25,10 +24,3 @@ explore: fact_matriculados {
     relationship: one_to_one
   }
 }
-explore: fact_facturacion {
-  join: sap_interfaz_recaudo {
-    type: left_outer
-    sql_on: ${fact_facturacion.asignacion}=${sap_interfaz_recaudo.asignacion};;
-    relationship: one_to_one
-  }
-  }
