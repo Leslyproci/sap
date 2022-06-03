@@ -10,8 +10,8 @@ datagroup: tablas_sap_default_datagroup {
 
 persist_with: tablas_sap_default_datagroup
 
-explore: fact_matriculados {
-  join: fact_facturacion {
+explore:fact_facturacion{
+  join: fact_matriculados {
     type: left_outer
     sql_on: ${fact_matriculados.persona_identificacion_actual}=${fact_facturacion.solicitante}
             and ${fact_matriculados.periodo_academico}=${fact_facturacion.periodo_academico}
