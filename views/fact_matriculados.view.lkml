@@ -692,7 +692,10 @@ view: fact_matriculados {
     sql: ${TABLE}.VALOR_PAGO_DETALLE ;;
     value_format: "\"COP\"0"
   }
-
+  measure: valor_pago {
+    type: sum
+    sql: CAST(${valor_pago_detalle} AS FLOAT64);;
+  }
   measure: count {
     type: count
     drill_fields: []
