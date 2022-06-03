@@ -696,6 +696,7 @@ view: fact_matriculados {
     type: sum
     sql: CAST(${valor_pago_detalle} AS FLOAT64);;
   }
+
   measure: count {
     type: count
     drill_fields: []

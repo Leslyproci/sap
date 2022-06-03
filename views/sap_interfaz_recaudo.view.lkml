@@ -270,8 +270,13 @@ view: sap_interfaz_recaudo {
   }
 
   dimension: valorneto {
-    type: string
+    type: number
     sql: ${TABLE}.Valorneto ;;
+    value_format: "\"COP\"0"
+  }
+  measure: valor_neto {
+    type: sum
+    sql: CAST(${valorneto} AS FLOAT64);;
   }
 
   measure: count {
