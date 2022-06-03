@@ -19,6 +19,11 @@ explore: fact_matriculados {
             and ${fact_matriculados.programa_codigo}=${fact_facturacion.idprograma};;
     relationship: one_to_one
   }
+  join: sap_interfaz_recaudo {
+    type: left_outer
+    sql_on: ${fact_facturacion.asignacion}=${sap_interfaz_recaudo.asignacion};;
+    relationship: one_to_one
+  }
 }
 explore: fact_facturacion {
   join: sap_interfaz_recaudo {
